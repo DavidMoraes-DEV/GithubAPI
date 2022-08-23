@@ -1,3 +1,55 @@
 .home-container {
-    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    font-size: 48px;
+}
+
+.home-container h1 {
+    margin-bottom: 5px;
+    font-size: 0.6em;
+    letter-spacing: 0.02em;
+}
+
+.home-container h4 {
+    font-size: 0.3em;
+    color: #7E7E7E;
+    letter-spacing: 0.02em;
+    margin-bottom: 25px;
+}
+
+.button-container {
+    width: 100px;
+    height: 40px;
+}
+
+.button-container p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 319px) {
+    .home-container h1 {
+        font-size: 0.4em;
+    }
+
+    ;.home-container h4 {
+        font-size: 0.2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .home-container {
+        padding: 30px 45px;
+    }
+    
+    .home-container h1 {
+        font-size: 1em;
+    }
+    
+    .home-container h4 {
+        font-size: 0.5em;
+        margin-bottom: 40px;
+    }
 }
