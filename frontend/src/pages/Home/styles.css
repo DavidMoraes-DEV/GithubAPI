@@ -15,15 +15,15 @@
     font-size: 0.3em;
     color: #7E7E7E;
     letter-spacing: 0.02em;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
-.button-container {
-    width: 100px;
+.button-content a {
     height: 40px;
+    margin-top: 0;
 }
 
-.button-container p {
+.button-content p {
     color: #fff;
     font-size: 16px;
     margin-bottom: 0;
@@ -36,6 +36,7 @@
 
     ;.home-container h4 {
         font-size: 0.2em;
+        margin-bottom: 0;
     }
 }
 
@@ -50,6 +51,6 @@
     
     .home-container h4 {
         font-size: 0.5em;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
     }
 }
