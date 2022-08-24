@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './styles.css';
 import 'App.css';
 import ResultCard from '../ResultCard';
+import CardLoader from './CardLoader';
 
 type formData = {
   profileGit: string;
@@ -19,6 +20,7 @@ type InfoProfile = {
 const GitProfile = () => {
   const [infoProfile, setInfoProfile] = useState<InfoProfile>();
   const [formData, setFormData] = useState<formData>({ profileGit: '' });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const name = event.target.name;
@@ -30,6 +32,7 @@ const GitProfile = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    setIsLoading(true);
     axios
       .get('https://api.github.com/users/' + formData.profileGit)
       .then((response) => {
@@ -37,6 +40,9 @@ const GitProfile = () => {
       })
       .catch((error) => {
         setInfoProfile(undefined);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -61,14 +67,18 @@ const GitProfile = () => {
           </div>
         </form>
       </div>
-      {infoProfile && (
-        <ResultCard
-          avatar_Url={infoProfile.avatar_url}
-          url={infoProfile.url}
-          followers={infoProfile.followers}
-          location={infoProfile.location}
-          name={infoProfile.name}
-        />
+      {isLoading ? (
+        <CardLoader />
+      ) : (
+        infoProfile && (
+          <ResultCard
+            avatar_Url={infoProfile.avatar_url}
+            url={infoProfile.url}
+            followers={infoProfile.followers}
+            location={infoProfile.location}
+            name={infoProfile.name}
+          />
+        )
       )}
     </div>
   );
