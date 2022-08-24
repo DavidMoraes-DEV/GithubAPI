@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import './styles.css';
 import 'App.css';
+import ResultCard from '../ResultCard';
 
 type formData = {
   profileGit: string;
@@ -59,13 +60,16 @@ const GitProfile = () => {
             </button>
           </div>
         </form>
-
-        {infoProfile &&
-            <>
-        
-            </>
-        }
       </div>
+      {infoProfile && (
+        <ResultCard
+          avatar_Url={infoProfile.avatar_url}
+          url={infoProfile.url}
+          followers={infoProfile.followers}
+          location={infoProfile.location}
+          name={infoProfile.name}
+        />
+      )}
     </div>
   );
 };

@@ -1,24 +1,20 @@
 .search-container {
     padding: 25px 15px;
-    border: 1px solid rebeccapurple;
 }
 
 .search-content-container {
     padding: 25px 15px;
-    border: 1px solid red;
 }
 
 .search-content-container h1 {
     font-size: 22px;
     font-weight: 500;
-    margin-bottom: 15px;    
-    border: 1px solid black;
+    margin-bottom: 15px;
 }
 
 .form-content {
     display: flex;
     flex-direction: column;
-    border: 1px solid green;
 }
 
 .form-content button {
@@ -34,6 +30,10 @@
     border: 1px solid #D9D9D9;
     font-size: 16px;
     border-radius: 1px;
+}
+
+.search-input:focus {
+    border: 2px solid red;
 }
 
 .search-input::placeholder {
@@ -81,11 +81,11 @@
 
 @media (min-width: 1200px) {
     .search-container {
-        padding: 55px 90px;
+        padding: 40px 80px;
     }
     
     .search-content-container {
-        padding: 55px 30px;
+        padding: 28px 30px 30px 30px;
     }
     
     .search-content-container h1 {
