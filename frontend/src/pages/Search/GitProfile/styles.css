@@ -18,6 +18,7 @@
 }
 
 .form-content button {
+    width: 200px;
     margin-top: 35px;
     color: #fff;
     font-size: 16px;
@@ -30,10 +31,6 @@
     border: 1px solid #D9D9D9;
     font-size: 16px;
     border-radius: 1px;
-}
-
-.search-input:focus {
-    border: 2px solid red;
 }
 
 .search-input::placeholder {
@@ -73,7 +70,6 @@
     }
     
     .form-content button {
-        width: 100px;
         margin-top: 25px;
         font-size: 16px;
     }

@@ -61,7 +61,7 @@ const GitProfile = () => {
               onChange={handleChange}
               className="search-input"
             />
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary git-profile-button">
               Encontrar
             </button>
           </div>

@@ -1,56 +1,175 @@
 .home-container {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 20px;
-    font-size: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: calc(100vh - 62px);
+  min-width: 100%;
+  padding: 60px 20px;
 }
 
-.home-container h1 {
-    margin-bottom: 5px;
-    font-size: 0.6em;
-    letter-spacing: 0.02em;
+.home-card-container {
+  display: none;
 }
 
-.home-container h4 {
-    font-size: 0.3em;
-    color: #7E7E7E;
-    letter-spacing: 0.02em;
-    margin-bottom: 5px;
+.home-logo-github-container {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 40px;
 }
 
-.button-content a {
-    height: 40px;
-    margin-top: 0;
+.home-description h1 {
+  margin-bottom: 10px;
+  font-size: 19px;
+  letter-spacing: 0.02em;
+  border-bottom: 2px solid #1890ff;
 }
 
-.button-content p {
-    color: #fff;
-    font-size: 16px;
-    margin-bottom: 0;
+.home-description h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #7e7e7e;
+  letter-spacing: 0.02em;
+  margin-bottom: 70px;
+}
+
+.home-button-container {
+  width: 100%;
+}
+
+.button-content {
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.button-content:hover {
+    color: rgb(224, 224, 224);
 }
 
 @media (max-width: 319px) {
-    .home-container h1 {
-        font-size: 0.4em;
-    }
+  .home-container h1 {
+    font-size: 0.4em;
+  }
 
-    ;.home-container h4 {
-        font-size: 0.2em;
-        margin-bottom: 0;
-    }
+  .home-container h4 {
+    font-size: 0.2em;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .home-container h1 {
+    font-size: 25px;
+  }
+
+  .home-container h4 {
+    font-size: 18px;
+  }
+
+  .button-content {
+    width: 200px;
+  }
 }
 
 @media (min-width: 768px) {
-    .home-container {
-        padding: 30px 45px;
-    }
-    
-    .home-container h1 {
-        font-size: 1em;
-    }
-    
-    .home-container h4 {
-        font-size: 0.5em;
-        margin-bottom: 10px;
-    }
+  .home-container {
+    flex-direction: row;
+  }
+
+  .home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-logo-github-container {
+    margin-bottom: 0;
+    margin-right: 50px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .home-description {
+    height: 100%;
+  }
+
+  .home-description h1 {
+    font-size: 30px;
+  }
+
+  .home-description h4 {
+    margin-bottom: 0;
+    font-size: 23px;
+  }
+
+  .home-button-container {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-container {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    padding: 60px 30px;
+  }
+
+  .home-card-container {
+    display: flex;
+    height: 450px;
+  }
+
+  .home-card-container img {
+    width: 100%;
+  }
+
+  .home-content {
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .home-logo-github-container {
+    margin-bottom: 40px;
+    margin-right: 0;
+    width: 160px;
+    height: 160px;
+  }
+
+  .home-description h4 {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-card-container {
+    width: auto;
+    min-height: 500px;
+  }
+
+  .home-content {
+    margin-right: 30px;
+  }
+
+  .home-logo-github-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .home-description h1 {
+    font-size: 40px;
+  }
+
+  .home-description h4 {
+    font-size: 30px;
+  }
+
+  .button-content {
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+  }
 }
